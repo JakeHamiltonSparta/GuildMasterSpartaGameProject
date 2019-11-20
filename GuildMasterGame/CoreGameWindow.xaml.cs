@@ -59,7 +59,6 @@ namespace GuildMasterGame
 
                     questionID.Add(question.Key);
 
-                
                 // Console.WriteLine($"{question.Key,-15}{question.Value}");
             }
         }
@@ -80,7 +79,7 @@ namespace GuildMasterGame
             {
                 if (comparsionList.Count == questionID.Count)
                 {
-
+                    MessageBox.Show("Congratulations you survived! \n Your score is " + score.ToString());
                 }
                 else
                 {
@@ -113,6 +112,7 @@ namespace GuildMasterGame
                     CheckScore("Deny");
                     break;
             }
+            IDValidation();
         }
 
         public string GetBtn(object obj)
@@ -137,13 +137,30 @@ namespace GuildMasterGame
                 else
                 {
                     playerHealth--;
+
+                    if (playerHealth == 0)
+                    {
+                        MessageBox.Show("YOU DIED!");
+                        MainWindow mw = new MainWindow();
+                        this.Close();
+                        mw.Show();
+                    }
                 }
             }
+           
             else if (btn == "Deny")
             {
                 if ((num%2.0) == 0)
                 {
                     playerHealth--;
+
+                    if (playerHealth == 0)
+                    {
+                        MessageBox.Show("YOU DIED!");
+                        MainWindow mw = new MainWindow();
+                        this.Close();
+                        mw.Show();
+                    }
                 }
                 else
                 {

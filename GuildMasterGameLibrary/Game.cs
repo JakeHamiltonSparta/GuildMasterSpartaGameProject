@@ -26,8 +26,10 @@ namespace GuildMasterGameLibrary
         {
             // get the questions from our text file
             string[] questions = File.ReadAllLines("QuestionBank.dat");
-            // put questions into dictionary
 
+            questionsDictionary.Clear();
+
+            // put questions into dictionary
             for (int i = 0; i < questions.Length; i++)
             {
                 questionsDictionary.Add(i, questions[i]);
