@@ -1,0 +1,5 @@
+C:\Users\Jake Hamilton\Engineering45\Week3\day5\GuildMasterGame\GuildMasterGameLibrary\bin\Debug\GuildMasterGameLibrary.dll
+C:\Users\Jake Hamilton\Engineering45\Week3\day5\GuildMasterGame\GuildMasterGameLibrary\bin\Debug\GuildMasterGameLibrary.pdb
+C:\Users\Jake Hamilton\Engineering45\Week3\day5\GuildMasterGame\GuildMasterGameLibrary\obj\Debug\GuildMasterGameLibrary.csprojAssemblyReference.cache
+C:\Users\Jake Hamilton\Engineering45\Week3\day5\GuildMasterGame\GuildMasterGameLibrary\obj\Debug\GuildMasterGameLibrary.dll
+C:\Users\Jake Hamilton\Engineering45\Week3\day5\GuildMasterGame\GuildMasterGameLibrary\obj\Debug\GuildMasterGameLibrary.pdb
