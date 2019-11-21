@@ -23,8 +23,11 @@ namespace GuildMasterGame
     {
         int playerHealth = 3;
         int score = 0;
+        int counter = 0;
         public List<int> questionID = new List<int>();
-        public List<int> comparsionList = new List<int>();
+     //   public List<int> comparsionList = new List<int>();
+        public List<int> questionsList = new List<int>();
+        
 
         Question quest = new Question();
 
@@ -48,7 +51,8 @@ namespace GuildMasterGame
 
             GuildMasterList();
 
-            IDValidation();
+            GenerateQuestionList();
+            ShowQuestion();
         }
 
 
@@ -63,6 +67,11 @@ namespace GuildMasterGame
             }
         }
 
+        public void ShowQuestion()
+        {
+            int firstQuestion = questionsList[counter];
+            ChangeTextBlock(counter);
+        }
       
         //Dictionary<int, string> questionsDict = new Dictionary<int, string>();
         public int GetRandomID()
@@ -72,32 +81,47 @@ namespace GuildMasterGame
             return randomNum;
         }
 
-        public void IDValidation()
+        public void WinCheck()
         {
-            int i = GetRandomID();
-            if (comparsionList.Contains(i))
-            {
-                if (comparsionList.Count == questionID.Count)
+            //int i = GetRandomID();
+            //if (comparsionList.Contains(i))
+            //{
+                if (counter == questionsList.Count-1)
                 {
                     MessageBox.Show("Congratulations you survived! \n Your score is " + score.ToString());
                 }
-                else
-                {
-                    IDValidation();
-                }
+            //else
+            //{
+            //    IDValidation();
+            //}
 
-            }
-            else if(!(comparsionList.Contains(i)))
+            //}
+            //else if(!(comparsionList.Contains(i)))
+            //{
+            //    ChangeTextBlock(i);
+            //    comparsionList.Add(i);
+            //}
+            ShowQuestion();
+        }
+
+        public void GenerateQuestionList()
+        {
+            while (questionsList.Count != questionID.Count)
             {
-                ChangeTextBlock(i);
-                comparsionList.Add(i);
-            }
+                int i = GetRandomID();
 
+                if (!(questionsList.Contains(i)))
+                {
+                    questionsList.Add(i);
+                }
+            }
+            
         }
         private void ChangeTextBlock(int i)
         {
-            string displayText = Question.questionsDictionary[i];
+            string displayText = Question.questionsDictionary[questionsList[i]];
             QuestionTextBlock.Text = displayText;
+            
         }
 
         private void AnswerButton_Click(object sender, RoutedEventArgs e)
@@ -106,13 +130,15 @@ namespace GuildMasterGame
             {
                 case "Confirm":
                     CheckScore("Confirm");
+                    counter++;
                     break;
 
                 case "Deny":
                     CheckScore("Deny");
+                    counter++;
                     break;
             }
-            IDValidation();
+            WinCheck();
         }
 
         public string GetBtn(object obj)
@@ -127,7 +153,7 @@ namespace GuildMasterGame
 
             if (btn == "Confirm")
             {  
-                if ((num%2.0) == 0)
+                if ((num%2.0)== 0)
                 {
                     score++;
                     ScoreTextBox.IsEnabled = true;
@@ -168,13 +194,17 @@ namespace GuildMasterGame
                     ScoreTextBox.IsEnabled = true;
                     ScoreTextBox.Text=score.ToString();
                     ScoreTextBox.IsEnabled = false;
+                    
                 }
             }
+            
         }
         public double CheckListArray()
         {
-            int checkNum = comparsionList.Count() - 1;
-            return (double)comparsionList[checkNum];
+            return (double)questionID[questionsList[counter]];
         }
+
+        
     }
+
 }

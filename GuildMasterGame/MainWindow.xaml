@@ -7,7 +7,11 @@
         mc:Ignorable="d"
         Title="Start screen" Height="450" Width="800">
     <Grid>
-        <Button x:Name="StartButton" Content="Start" HorizontalAlignment="Center" Margin="199,193,194.6,0" VerticalAlignment="Top" Width="400" RenderTransformOrigin="0.503,0.525" Height="70" FontFamily="Gill Sans Nova" FontSize="48" Click="StartButton_Click"/>
-        <Label x:Name="GuildMasterLabel" Content="Guild Master" HorizontalAlignment="Left" Margin="261,42,0,0" VerticalAlignment="Top" Height="63" Width="279" FontFamily="Gill Sans Nova" FontSize="48"/>
+        <Image Source="resources\GuildMasterTitleScreen.png" Stretch="Fill"/>
+        <Image Source="resources\TherapyGames.png" Margin="582,276,-40.4,10" OpacityMask="Black"/>
+        <Button x:Name="StartButton"  Style="{StaticResource TransparentButton}" Content="Start" HorizontalAlignment="Center" Margin="210,253,183.6,0" VerticalAlignment="Top" Width="400" RenderTransformOrigin="0.503,0.525" Height="70" Click="StartButton_Click" Foreground="White" />
+        <Label x:Name="GuildMasterLabel" Content="Guild Master" HorizontalAlignment="Left" Margin="261,28,0,0" VerticalAlignment="Top" Height="63" Width="279" FontFamily="Gill Sans Nova" FontSize="48" Background="Black" Foreground="#FFFF5706"/>
     </Grid>
+    
+    
 </Window>

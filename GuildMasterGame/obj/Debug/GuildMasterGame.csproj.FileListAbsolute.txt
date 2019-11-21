@@ -36,3 +36,6 @@ C:\Users\Jake Hamilton\Engineering45\GuildMasterSpartaGameProject\GuildMasterGam
 C:\Users\Jake Hamilton\Engineering45\GuildMasterSpartaGameProject\GuildMasterGame\obj\Debug\GuildMasterGame.Properties.Resources.resources
 C:\Users\Jake Hamilton\Engineering45\GuildMasterSpartaGameProject\GuildMasterGame\obj\Debug\GuildMasterGame.csproj.GenerateResource.cache
 C:\Users\Jake Hamilton\Engineering45\GuildMasterSpartaGameProject\GuildMasterGame\obj\Debug\GuildMasterGame.csproj.CopyComplete
+C:\Users\Jake Hamilton\Engineering45\GuildMasterSpartaGameProject\GuildMasterGame\obj\Debug\App.baml
+C:\Users\Jake Hamilton\Engineering45\GuildMasterSpartaGameProject\GuildMasterGame\bin\Debug\resources\CoreGamePageScreen
+C:\Users\Jake Hamilton\Engineering45\GuildMasterSpartaGameProject\GuildMasterGame\obj\Debug\GuildMasterGame_Content.g.cs

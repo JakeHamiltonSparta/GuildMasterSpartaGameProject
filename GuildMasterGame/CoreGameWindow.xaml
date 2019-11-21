@@ -7,10 +7,30 @@
         mc:Ignorable="d"
         Title="CoreGameWindow" Height="450" Width="800">
     <Grid>
-        <TextBlock x:Name="QuestionTextBlock" HorizontalAlignment="Left" Margin="100,40,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="110" Width="638"/>
-        <Button x:Name="ConfirmButton" Content="Confirm" HorizontalAlignment="Left" Margin="100,179,0,0" VerticalAlignment="Top" Width="173" Height="67" FontFamily="Gill Sans Nova" FontSize="18" Click="AnswerButton_Click"/>
-        <Button x:Name="DenyButton" Content="Deny" HorizontalAlignment="Left" Margin="565,179,0,0" VerticalAlignment="Top" Width="173" Height="67" FontFamily="Gill Sans Nova" FontSize="20" Click="AnswerButton_Click"/>
-        <Label x:Name="ScoreLabel" Content="Score" HorizontalAlignment="Left" Margin="379,269,0,0" VerticalAlignment="Top" FontFamily="Gill Sans Nova" FontSize="20"/>
-        <TextBox x:Name="ScoreTextBox" HorizontalAlignment="Left" Height="23" Margin="351,327,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontFamily="Gill Sans Nova" FontSize="20"/>
+        <Image Source="resources\CoreGamePageScreen" Stretch="Fill" Margin="0,0,-0.4,0" />
+        <StackPanel Orientation="Vertical">
+            <TextBlock x:Name="QuestionTextBlock" Text="TEXT HERE" VerticalAlignment="Center" Foreground="White" TextWrapping="Wrap" Height="83" Width="700" FontFamily="Gill Sans Nova" FontSize="20" TextAlignment="Center" Margin="49,0,44.6,0" Background="#FF864400" OpacityMask="#FFF78500"/>
+            <Grid Margin="0 75">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0">
+                    <Button x:Name="ConfirmButton" Content="Confirm" Width="173" Height="67" FontFamily="Gill Sans Nova" FontSize="18" Click="AnswerButton_Click" Background="#FF00FC0C"/>
+                </StackPanel>
+                <StackPanel Grid.Column="1">
+                    <Button x:Name="DenyButton" Content="Deny" Width="173" Height="67" FontFamily="Gill Sans Nova" FontSize="20" Click="AnswerButton_Click" Background="#FFFF0202"/>
+                </StackPanel>
+            </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0" HorizontalAlignment="Center">
+                    <Label x:Name="ScoreLabel" Content="Score" FontFamily="Gill Sans Nova" FontSize="36" Height="59" Width="98"/>
+                    <TextBox x:Name="ScoreTextBox"  Height="23" TextWrapping="Wrap" Width="120" FontFamily="Gill Sans Nova" FontSize="20"/>
+                </StackPanel>
+            </Grid>
+        </StackPanel>
     </Grid>
 </Window>
